@@ -42,7 +42,7 @@ This project is a multi-step form built with Next.js, React, and Tailwind CSS. T
 
    ```bash
    npm install
-   3. **Run the development server:**
+3. **Run the development server:**
 
    ```bash
    npm run dev
