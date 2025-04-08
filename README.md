@@ -56,18 +56,3 @@ Use the dark mode toggle button (available in the header or a designated locatio
 
 - **Final Submission:**
 On the review page, click the "Submit" button to log your information to the console. This will also reset the form back to the initial step
-
-### Project Structure
-├── components
-│   ├── DarkModeToggle.jsx     // Component to toggle dark mode
-│   ├── MultiStepForm.jsx      // Main multi-step form container
-│   ├── StepOne.jsx            // Collects personal information
-│   ├── StepTwo.jsx            // Collects address details
-│   ├── StepThree.jsx          // Collects account setup details (with password toggles)
-│   └── StepFour.jsx           // Review and final submission
-├── pages / app                // Next.js pages or app folder for routing
-├── public                     // Static assets
-├── styles
-│   └── globals.css            // Global CSS including Tailwind directives
-├── tailwind.config.js         // Tailwind CSS configuration
-└── package.json               // Project configurations and dependencies
