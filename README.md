@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Multi-Step Form Project
 
-## Getting Started
+This project is a multi-step form built with Next.js, React, and Tailwind CSS. The form is designed with client-side validation using React Hook Form and Zod. It includes light/dark mode support and features a dark mode toggle. The form collects user information in multiple steps, displays a review page before final submission, and then logs the collected data to the console while resetting the form.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Multi-Step Form:**  
+  Gather user information across four steps: Personal Information, Address Details, Account Setup, and Final Review.
+  
+- **Form Validation:**  
+  Use React Hook Form with Zod to enforce validation rules for each field.
+  
+- **Password Visibility Toggle:**  
+  Enable users to toggle between "Show" and "Hide" for password fields during account setup.
+  
+- **Final Data Review:**  
+  Display a summary of all submitted data before final submission.
+  
+- **Dark/Light Mode Support:**  
+  Responsive dark mode using Tailwind CSS. Toggle dark mode via a dedicated component.
+  
+- **Responsive Design:**  
+  Fully responsive layout that adapts to mobile devices using Tailwind’s utility classes.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- [Next.js](https://nextjs.org/) (App Router)
+- [React](https://reactjs.org/)
+- [React Hook Form](https://react-hook-form.com/)
+- [Zod](https://github.com/colinhacks/zod)
+- [Tailwind CSS](https://tailwindcss.com/)
+- *(Optional)* React Query or RTK Query for simulating API calls
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Installation
 
-## Learn More
+1. **Clone the repository:**
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   git clone https://github.com/MoniruzzamanBappy/form-multi-step.git
+   cd form-multi-step
+2. **Install dependencies:**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   npm install
+   3. **Run the development server:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```bash
+   npm run dev
 
-## Deploy on Vercel
+Usage
+- **Navigation Through Steps:**
+Start filling out your information step by step. Use the "Next" and "Previous" buttons to navigate between form steps.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Dark Mode Toggle:**
+Use the dark mode toggle button (available in the header or a designated location) to switch between light and dark themes.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Final Submission:**
+On the review page, click the "Submit" button to log your information to the console. This will also reset the form back to the initial step
+
+### Project Structure
+├── components
+│   ├── DarkModeToggle.jsx     // Component to toggle dark mode
+│   ├── MultiStepForm.jsx      // Main multi-step form container
+│   ├── StepOne.jsx            // Collects personal information
+│   ├── StepTwo.jsx            // Collects address details
+│   ├── StepThree.jsx          // Collects account setup details (with password toggles)
+│   └── StepFour.jsx           // Review and final submission
+├── pages / app                // Next.js pages or app folder for routing
+├── public                     // Static assets
+├── styles
+│   └── globals.css            // Global CSS including Tailwind directives
+├── tailwind.config.js         // Tailwind CSS configuration
+└── package.json               // Project configurations and dependencies
