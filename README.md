@@ -47,7 +47,7 @@ This project is a multi-step form built with Next.js, React, and Tailwind CSS. T
    ```bash
    npm run dev
 
-Usage
+## Usage
 - **Navigation Through Steps:**
 Start filling out your information step by step. Use the "Next" and "Previous" buttons to navigate between form steps.
 
